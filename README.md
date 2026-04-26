@@ -57,5 +57,5 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 
-## This project is created for lerning porpose, this project is created usgin static data, auth guard, interceptor and services
+## This project is created for learning purposes. It uses static data, an auth guard, an interceptor, and services.
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
