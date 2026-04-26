@@ -1,0 +1,39 @@
+<h3>STUDENT LIST</h3>
+<div class="card shadow p-3">
+    <table class="table table-bordered table-hover table-striped">
+      <thead class="table-dark">
+    <tr>
+        <td>StudentName</td>
+        <td>Age</td>
+        <td>MobileNo</td>
+        <td>Address</td>
+        <td>Status</td>
+      <td class="text-center" colspan="2">
+        Action
+      </td>
+        </tr>
+        </thead>
+<tbody>
+
+    <tr *ngFor="let student of studentList">
+<td>{{student.name}}</td>
+<td>{{student.age}}</td>
+<td>{{student.mobile}}</td>
+<td>{{student.address}}</td>
+<td>
+    <span 
+      class="badge"
+      [ngClass]="student.status == 'Active' ? 'bg-success' : 'bg-danger'">
+  
+      {{ student.status }}
+  
+    </span>
+  </td>
+
+  <td><a [routerLink]="['/edit', student.id]"  class="btn btn-primary">Edit</a></td>
+  <td><a href="/delete" class="btn btn-danger">Delete</a></td>
+    </tr>
+</tbody>
+    
+</table>
+</div>

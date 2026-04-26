@@ -1,0 +1,54 @@
+
+<div class="card shadow">
+<!-- 
+    <div class="card-header bg-success text-white">
+    </div> -->
+
+    <div class="card-body">
+
+      <div class="row text-center">
+
+        <div class="col-md-4 mb-3">
+          <div class="card border-primary shadow-sm">
+            <div class="card-body">
+              <h5>Total Students</h5>
+              <h2>{{stats.totalStudent}}</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card border-success shadow-sm">
+            <div class="card-body">
+              <h5>{{stats.activePercent | number:'1.0-0'}}% Active Students</h5>
+              <h2>{{stats.totalActive}}</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card border-danger shadow-sm">
+            <div class="card-body">
+              <h5>
+                {{stats.inAcitvePercent| number:'1.0-0' }}% Inactive Students
+              </h5>
+              <h2>{{stats.totalInActive}}</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <h5>Recent Activity</h5>
+
+      <ul class="list-group">
+        <li class="list-group-item">New Student Registered</li>
+        <li class="list-group-item">Student Updated Profile</li>
+        <li class="list-group-item">Fee Submitted</li>
+      </ul>
+
+    </div>
+    
+  </div>

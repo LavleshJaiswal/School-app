@@ -1,0 +1,26 @@
+<h3>Admin Login Panel</h3>
+<form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+<div class="row">
+<div class="col-4">    
+    <label>Enter your  UserName</label>
+    <input class="form-controll" type="text" formControlName="userName">
+<div *ngIf="loginForm.get('userName')?.touched && loginForm.get('userName')?.invalid">
+    <small style="color: red;" *ngIf="loginForm.get('userName')?.errors?.['required']">
+Enter your username
+</small>
+
+</div>
+</div>
+<div class="col-4">
+<label>Enter Your Password</label>
+<input class="form-controll" type="text" formControlName="password">
+
+<div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+    <small style="color: red" *ngIf="loginForm.get('password')?.errors?.['required']">
+Enter your Password
+</small>
+
+</div></div>
+</div>
+<input [disabled]="loginForm.invalid" type="submit" value="Login">
+</form>

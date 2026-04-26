@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+  <!-- Header -->
+  <div class="row bg-primary text-white p-3">
+    <div class="col-md-6">
+      <h3>Admin Panel</h3>
+    </div>
+
+    <div class="col-md-6 text-end">
+      <button class="btn btn-light btn-sm" (click)='logout()'>Logout</button>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-md-2 bg-dark text-white min-vh-100 p-3">
+
+      <h5 class="mb-4">Menu</h5>
+
+      <ul class="nav flex-column">
+
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" routerLink="/home" >Dashboard</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" href="#">Profile</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          
+          <a class="nav-link text-white" routerLink = "/studentlist">Student List</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" routerLink="/register" >Add Student</a>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white" href="#">Settings</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-10 p-4">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</div>

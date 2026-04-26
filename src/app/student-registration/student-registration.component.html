@@ -1,0 +1,72 @@
+<p>student-registration works!</p>
+<h2>Welcome to Schoo Registration</h2>
+
+<h2>Student Registration</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <!-- Textbox -->
+  <label>Name:</label>
+<input type="text" formControlName="name">
+
+<div *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.invalid">
+  <small *ngIf="registerForm.get('name')?.errors?.['required']">
+    Name is required
+  </small>
+</div>
+  <br>
+
+  <!-- Email -->
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email">
+  </div>
+<diV *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+<small *ngIf="registerForm.get('email')?.errors?.['required']">
+Email field are requied
+</small>
+</diV>
+  <br>
+
+  <!-- Radio Button -->
+  <div>
+    <label>Gender:</label>
+    <input type="radio" value="Male" formControlName="gender"> Male
+    <input type="radio" value="Female" formControlName="gender"> Female
+  </div>
+<div *ngIf="registerForm.get('gender')?.touched && registerForm.get('gender')?.invalid">
+<small *ngIf="registerForm.get('gender')?.errors?.['required']">
+  Gender field are required
+</small>>
+</div>
+  <br>
+
+  <!-- Dropdown -->
+  <div>
+    <label>Course:</label>
+    <select formControlName="course">
+      <option value="">Select</option>
+      <option value="BCA">BCA</option>
+      <option value="MCA">MCA</option>
+      <option value="B.Tech">B.Tech</option>
+    </select>
+  </div>
+<div *ngIf="registerForm.get('course')?.touched && registerForm.get('course')?.invalid">
+<small *ngIf="registerForm.get('course')?.errors?.['required']">
+  Please select the course
+</small>
+</div>
+  <br>
+
+  <!-- Checkbox -->
+  <div>
+    <input type="checkbox" formControlName="agree">
+    <label>I agree to terms</label>
+  </div>
+
+  <br>
+
+  <!-- Submit -->
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+
+</form>
